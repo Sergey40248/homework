@@ -1,0 +1,10 @@
+# (!!!Доп!!!) Напишите программу
+# для проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
+# (0,0,0), (0,0,1) и тд.
+
+import itertools
+
+for i in itertools.product('01', repeat = 3):
+    x,y,z = (i)
+    print(x,y,z)
+    print((not(x,y,z)) == (not(x))*(not(y))*(not(z)) )
